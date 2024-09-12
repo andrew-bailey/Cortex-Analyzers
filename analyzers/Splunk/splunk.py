@@ -81,7 +81,7 @@ class Splunk(Analyzer):
 
 
                    finally:
-                       jobs[saved_search]["link"] = "http://"+self.HOST+":"+self.PORT_GUI+"/fr-FR/app/"+self.APP+"/search?sid="+job["sid"]
+                       jobs[saved_search]["link"] = "https://"+self.HOST+":"+self.PORT_GUI+"/app/"+self.APP+"/search?sid="+job["sid"]
                        jobs[saved_search]["eventCount"] = int(job["eventCount"])
                        jobs[saved_search]["resultCount"] = int(job["resultCount"])
                        jobs[saved_search]["searchEarliestTime"] = datetime.utcfromtimestamp(round(float(job["searchEarliestTime"]))).strftime("%c")
